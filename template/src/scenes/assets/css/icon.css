@@ -1,0 +1,118 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?mhedy4');
+  src:  url('../fonts/icomoon.eot?mhedy4#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?mhedy4') format('truetype'),
+    url('../fonts/icomoon.woff?mhedy4') format('woff'),
+    url('../fonts/icomoon.svg?mhedy4#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-next:before {
+  content: "\e900";
+  color: #666;
+}
+.icon-del:before {
+  content: "\e901";
+  color: #4d7bfe;
+}
+.icon-error .path1:before {
+  content: "\e902";
+  color: rgb(249, 90, 86);
+}
+.icon-error .path2:before {
+  content: "\e903";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-error .path3:before {
+  content: "\e904";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-pre:before {
+  content: "\e905";
+  color: #666;
+}
+.icon-slotCard .path1:before {
+  content: "\e906";
+  color: none;
+}
+.icon-slotCard .path2:before {
+  content: "\e907";
+  margin-left: -1.345703125em;
+  color: rgb(255, 234, 232);
+}
+.icon-slotCard .path3:before {
+  content: "\e908";
+  margin-left: -1.345703125em;
+  color: none;
+}
+.icon-slotCard .path4:before {
+  content: "\e909";
+  margin-left: -1.345703125em;
+  color: rgb(250, 215, 212);
+}
+.icon-sm .path1:before {
+  content: "\e90a";
+  color: rgb(255, 234, 232);
+}
+.icon-sm .path2:before {
+  content: "\e90b";
+  margin-left: -1em;
+  color: rgb(59, 61, 65);
+}
+.icon-rightPre .path1:before {
+  content: "\e90c";
+  color: rgb(0, 0, 0);
+}
+.icon-rightPre .path2:before {
+  content: "\e90d";
+  margin-left: -0.5em;
+  color: rgb(255, 255, 255);
+}
+.icon-rightPre .path3:before {
+  content: "\e90e";
+  margin-left: -0.5em;
+  color: none;
+}
+.icon-leftNext .path1:before {
+  content: "\e90f";
+  color: rgb(0, 0, 0);
+}
+.icon-leftNext .path2:before {
+  content: "\e910";
+  margin-left: -0.5em;
+  color: rgb(255, 255, 255);
+}
+.icon-leftNext .path3:before {
+  content: "\e911";
+  margin-left: -0.5em;
+  color: none;
+}
+.icon-card:before {
+  content: "\e912";
+}
+.icon-customer:before {
+  content: "\e913";
+}
+.icon-home:before {
+  content: "\e914";
+}

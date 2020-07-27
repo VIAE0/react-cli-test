@@ -1,0 +1,132 @@
+.upload{
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 100px;
+    h1,h3{
+        text-align: center;
+    }
+    h1{
+        line-height: 66px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    h3{
+        line-height: 48px;
+        margin-bottom: 90px;
+    }
+    .btn-sure{
+        width: 300px;
+        height: 80px;
+        line-height: 80px;
+        @extend .go-back;
+        left: 80%;
+        font-weight: normal;
+        @include btn($fontColor_blue4D,$fontColor_blue74,40px,$fontColor_white,none);
+    }
+    .swiper-con{
+        width: 111%;
+        position: relative;
+        left: -6%;
+         .swiper-button-prev,.swiper-button-next{
+            --swiper-navigation-size:100px;
+            outline: none;
+         }
+    }
+
+    .swiper-container{
+        width: 88%;
+        overflow: hidden;
+        .swiper-wrapper{
+            display: flex;
+            width: 200%;
+            .swiper-slide{
+                width: 640px;
+                text-align: center;
+                position: relative;
+                margin: 0px 20px;
+                .input-upload{
+                    width: 640px;
+                    height: 450px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                }
+                .img-res{
+                    @extend .input-upload;
+                    opacity: 1;
+                    display: none;
+                }
+                .camera{
+                    @include btn($bgColor_FC,$bgColor_F8,10px,$fontColor_AB,$fontColor_EE);
+                    width: 640px;
+                    height: 450px;
+                    vertical-align: middle;
+                    display: table-cell;
+                    overflow: hidden;
+                }
+                span{
+                    display: block;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+    .swiper-button-next:after, .swiper-button-prev:after {
+        font-size: 0px!important;
+    }
+    .swiper-button-prev img{
+        transform:rotate(-180deg)
+    }
+    
+}
+// 关闭按钮
+.close{
+    position: absolute;
+    top: 40px;
+    right: 7%;
+}
+
+.upload-camera{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+    .camera-content{
+        display: flex;
+        height: 1000px;
+        .camera-box{
+            background: #1d1e1f;
+            width: 80%;
+            .swiper-pagination{
+                span{
+                    width: 28px;
+                    height: 28px;;
+                }
+                .self-bullet-acvtive{
+                    background: #333;
+                }
+            }
+        }
+        ul{
+            flex: 1;
+            opacity: 0.8;
+            background: #000000;
+            text-align: center;
+            padding-top: 30px;
+            .photo{
+                background: #fff;
+                width: 120px;
+                border-radius: 50%;
+                margin: 0 auto;
+                display: none;
+               
+            }
+            .btn{
+                margin-bottom: 100px;
+            }
+        }
+        
+    }
+}

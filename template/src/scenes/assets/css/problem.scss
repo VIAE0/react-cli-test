@@ -1,0 +1,155 @@
+.problems{
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 110px;
+    p{
+        margin-bottom: 40px;
+    }
+    ul{
+        li{
+            width: 100%;
+            height: 80px;
+            line-height: 80px;
+            padding-left: 20px;
+            margin-bottom: 30px;
+            @include btn($fontColor_white,$fontColor_white,10px,$fontColor_33,$fontColor_AB);
+        }
+    }
+    
+}
+.tips{
+    color: #929292;
+    line-height: 36px;
+}
+// 模态框
+.dialog{
+    .content{
+        height: 450px;
+        overflow-y: scroll;
+        text-align: justify;
+        line-height: 42px;
+    }
+    h1{
+        margin-bottom:30px;
+    }
+    .btns{
+        display: flex;
+        button{
+            width: 45%;
+            height: 80px;
+            line-height: 80px;
+            margin-top: 30px;
+        }
+        .btn-back{
+            @include btn(#fff,#fff,40px,$fontColor_33,$fontColor_AB);
+        }
+    }
+    
+}
+.active{
+    background-image: linear-gradient(-131deg, #4D7BFE 0%, #749FFF 100%);
+}
+
+
+//resultEval css
+.result{
+    .warning{
+        @include warnPanel($fontColor_pink,$fontColor_red );
+    }
+    h1{
+        margin-bottom: 50px;
+        color: $fontColor_00;
+        text-align: center;
+    }
+    .problems{
+        ul{
+            li:nth-child(4){
+                display: flex;
+                input{
+                    flex:1;
+                    text-align: right;
+                    padding-right: 20px;
+                }
+            }
+        }
+        button{
+            width: 300px;
+            height: 80px;
+            line-height: 80px;
+            opacity: .5;
+            @extend .go-back;
+            left: 80%;
+            @include btn($fontColor_blue4D,$fontColor_blue74,40px,$fontColor_white,none);
+            
+        }
+        .btn-agin{
+            opacity: 1;
+        }
+    }
+    .finish{
+        width: 60%;
+        margin: 0 auto;
+        margin-top: 100px;
+        .back-eval{
+            display: block;
+            width: 300px;
+            height: 80px;
+            line-height: 80px;
+            margin: 0 auto;
+            margin-top: 50px;
+            @include btn($fontColor_blue4D,$fontColor_blue4D,40px,$fontColor_white,none);
+        }
+       
+    }
+    
+}
+.fair{
+    margin-top: 150px;
+    .btns{
+        display: flex;
+        margin-top: 100px;
+        height: 80px;
+        line-height: 80px;
+        justify-content: center;
+        button{
+            display: block;
+            width: 300px;
+            margin: 0px 20px;
+        }
+        .back-eval{
+            @include btn(#fff,#fff,40px,$fontColor_33,#ABABAB);
+        }
+        .back-agin{
+            @include btn($fontColor_blue4D,$fontColor_blue4D,40px,$fontColor_white,none);
+        }
+    }
+}
+
+//风险评估协议
+.protocol{
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 120px;
+    h1{
+        font-weight: 600;
+        text-align: center;
+    }
+    .content{
+        margin: 40px 0px;
+        padding: 40px;
+        height: 400px;
+        overflow-y: scroll;
+        text-align: justify;
+        line-height: 42px;
+        background: #FAFAFC;
+    }
+    .btn-agree{
+        width: 320px;
+        height: 80px;
+        line-height: 80px;
+        @extend .go-back;
+        left: 80%;
+        font-weight: normal;
+        @include btn($fontColor_blue4D,$fontColor_blue74,40px,$fontColor_white,none);
+    }
+}

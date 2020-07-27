@@ -1,0 +1,78 @@
+.home{
+
+    margin-top: 120px;
+    padding: 0px 10%;
+    .title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px;
+        h1{
+            text-align: center;
+            font-weight: 600;
+            line-height: 66px;
+        }
+        small{
+            color: #ABABAB;
+            margin-left: 20px;
+        }
+        i{
+            margin-left: 10px;
+            color: #ABABAB;
+        }
+    }
+    .menu-validate{
+        display: flex;
+        align-items: center;
+        color: $fontColor_00;
+        text-align: center;
+        .menu-item{
+            width: 45%;
+            height: 100%;
+            background: $bgColor_FC;
+            @include btn($bgColor_FC,$bgColor_F8,10px,none,#eee);
+            padding: 5% 2%;
+            .div-img{
+                height: 280px;
+                text-align: center;
+                img{
+                    height: 100%;
+                }
+            }
+            
+        }
+        li{
+            &:nth-child(2){ 
+                width:10%;
+                text-align: center;
+            }
+            .fz_32{
+                display: flex;
+                align-items: center;
+                font-weight: 600;
+                justify-content: center;
+                margin-top: 50px;
+                margin-bottom: 15px;
+                .icon-m2::before{
+                    background: url('../imgs/icon_sprite.png')no-repeat 0px 0px;
+                    background-size: contain;
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            .fz_28{
+                color: $fontColor_33
+            }
+        
+        }
+    }
+    
+}
+
+@media screen and (max-width:1400px){
+    .home{
+        
+         margin-top: 60px;
+        
+    }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "rc-cli",
+  "version": "1.4.1",
+  "description": "Quickly generate front-end engineering scaffolding",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "bin": {
+    "rc-cli": "./bin/rc-cli.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=8.9"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "commander": "^2.20.0",
+    "fs-extra": "^8.0.1",
+    "inquirer": "^6.3.1",
+    "node-cmd": "^3.0.0",
+    "ora": "^3.4.0",
+    "request": "^2.88.0",
+    "semver": "^6.1.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "git-cz": "^3.0.1"
+  }
+}
+

@@ -1,0 +1,275 @@
+@charset "utf-8";html{background-color:#fff;font-size:12px}
+body,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,figure,form,fieldset,legend,input,textarea,button,p,blockquote,th,td,pre,xmp{margin:0;padding:0}
+body,input,textarea,button,select,pre,xmp,tt,code,kbd,samp{line-height:1.5;font-family:HYQiHei,sans-serif}
+h1,h2,h3,h4,h5,h6,small,big,input,textarea,button,select{font-size:100%}
+h1,h2,h3,h4,h5,h6{font-family:HYQiHei,sans-serif}
+h1,h2,h3,h4,h5,h6,b,strong{font-weight:normal}
+address,cite,dfn,em,i,optgroup,var{font-style:normal}
+table{border-collapse:collapse;border-spacing:0;text-align:left}
+caption,th{text-align:inherit}
+ul,ol,menu{list-style:none}
+fieldset,img{border:0}
+img,object,input,textarea,button,select{vertical-align:middle}
+article,aside,footer,header,section,nav,figure,figcaption,hgroup,details,menu{display:block}
+audio,canvas,video{display:inline-block;*display:inline;*zoom:1}
+blockquote:before,blockquote:after,q:before,q:after{content:"\0020"}
+textarea{overflow:auto;resize:vertical}
+input,textarea,button,select,a{outline:0 none;border: none;}
+button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}
+mark{background-color:transparent}
+a,ins,s,u,del{text-decoration:none}
+sup,sub{vertical-align:baseline}
+html {overflow-x: hidden;height: 100%;width:100%;-webkit-tap-highlight-color: transparent;}
+body {font-family:HYQiHei,sans-serif;color:#000;line-height: 1;-webkit-text-size-adjust: none;}
+hr {height: .02rem;margin: .1rem 0;border: medium none;border-top: .02rem solid #cacaca;}
+a {color: #25a4bb;text-decoration: none;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+#root{width:94%;margin: 0 auto;}
+
+//************************under is common style************************//
+
+// 页面颜色变量
+$bgColor_FC:#FCFCFC;
+$bgColor_FA:#FAFAFC;
+$bgColor_F8:#F8F8F8;
+$fontColor_00:#000;
+$fontColor_33:#333;
+$fontColor_AB:#ABABAB;
+$fontColor_44:#444453;
+$fontColor_80:#808080;
+$fontColor_EE:#eee;
+$fontColor_white:#FFF;
+$fontColor_orange:#FF8420;
+$fontColor_orangeFE:#FEF0CF;
+$fontColor_red:#E74A54;
+$fontColor_pink:#FECFCF;
+$fontColor_blue4D:#4D7BFE;
+$fontColor_blue74:#749FFF;
+
+// 字号适配
+@media screen and (min-width:1401px){
+    .fz_56{ font-size: 56px;}
+    .fz_44{ font-size: 44px;}
+    .fz_40{ font-size: 40px;}
+    .fz_36{ font-size: 36px;}
+    .fz_32{ font-size: 32px;}
+    .fz_30{ font-size: 30px;}
+    .fz_28{ font-size: 28px;}
+    .fz_24{ font-size: 24px;}
+    .fz_20{ font-size: 20px;}
+}
+
+@media screen and (max-width:1400px){
+    .fz_56{font-size:52px;}
+    .fz_44{font-size:40px;}
+    .fz_40{font-size:36px;}
+    .fz_36{font-size:36px;}
+    .fz_32{font-size:28px;}
+    .fz_30{font-size:30px;}
+    .fz_28{font-size:24px;}
+    .fz_24{font-size:24px;}
+    .fz_20{font-size:18px;}
+
+}
+
+
+//按钮通用 mixin style
+@mixin btn($bgDark,$bgLight,$radius,$color,$borderColor){
+    background-image: linear-gradient(-131deg, $bgDark 0%, $bgLight 100%);
+    color: $color;
+    border-radius:$radius;
+    border: 1px solid $borderColor;
+    
+}
+
+@mixin warnPanel($bg,$color) {
+    background: $bg;
+    color:$color;
+}
+// header css
+.header{
+    display: flex;
+    height: 120px;
+    align-items: center;
+    margin-top: 40px;
+    .logo-img{
+        flex: 1;
+        height: 48px;
+        img{
+            height:100%;
+        }
+    }
+    ul{
+        display: flex;
+        width: 45%;
+        min-width: 250px;
+        justify-content: flex-end;
+        li{
+            display: flex;
+            padding: 0px 5%;
+            height: 80px;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 5px 3px 4px 5px rgba(66,91,168,0.05);
+            margin: 0px 20px;
+            @include btn(#fff,#fff,40px,$fontColor_33,none);
+            .icon-home{
+                margin-right: 25px;
+            }
+        }
+    }
+   
+}
+
+// icon css
+.icon{
+    font-family: 'icommon';
+    width: 10%;
+    display: inline-block;
+    text-align: center;
+    margin-right: 20px;
+    color: $fontColor_44
+}
+.icon-m2{ 
+    display: flex;
+    &::before{
+        content: '';
+        display: inline-block;
+    }
+
+}
+// warn component css
+.warning{
+    width: 108%;
+    margin-left: -4%;
+    margin-top: 30px;
+    height:88px;
+    line-height:88px;
+    text-align: center;
+    @include warnPanel($fontColor_orangeFE,$fontColor_orange )
+
+}
+// 业务 取卡
+.btn-links{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    position:fixed;
+    bottom: 65px;
+    left: 5%;
+    .icon-m2{
+        display: flex;
+        align-items: center;
+        &::before{
+            width: 44px;
+            height: 44px;
+            margin-right: 15px;
+        }
+    }
+    .task::before{
+        background: url('../imgs/qita.png')no-repeat;
+    }
+    .card::before{
+        background: url('../imgs/card.png')no-repeat;
+    }
+    
+}
+
+// LinkBtn component css
+.link-btn{
+    @include btn($fontColor_blue4D,$fontColor_blue74,40px,#fff,none);
+}
+
+.color-orage{
+    color: $fontColor_orange;
+}
+//黑色遮罩层
+.back_cover{
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+//上一步 css
+.go-back{
+    color:$fontColor_blue4D;
+    background:none;
+    position: fixed;
+    bottom:46px;
+    left:120px;
+    font-weight:600;
+}
+// 编辑经办人 css
+.edit-oper{
+    @extend .go-back;
+    left: 84%;
+}
+// 评估结果 css
+.result-list{
+    @include btn($bgColor_FC,$bgColor_FC,10px,$fontColor_33,none);
+    padding: 30px 40px;
+    .item{
+        display: flex;
+        height: 65px;
+        line-height: 65px;
+        label{
+            color: $fontColor_80;
+        }
+        span{
+            flex: 1;
+            text-align: right;
+        }
+    }
+    
+}
+
+// tosat css
+.toast{
+    z-index: 3;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-280px,-155px);
+    width: 560px;
+    height: 310px;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 50px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    h1{
+        color: $fontColor_white;
+        text-align: center;
+        line-height: 54px;
+        font-weight: normal;
+    }
+    .error{
+        display: block;
+        width: 70px;
+        height: 70px;
+        background: url('../imgs/toast.png')no-repeat;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width:1400px){
+    .header{
+        margin-top: 20px;
+        .logo-img{
+            height: 36px;
+        }
+        ul 
+        {
+            li{
+                height: 60px;
+            }
+        }
+    }
+    .enter-psd{
+        .psd-img{
+            width: 45%;
+            padding-left: 0px;
+        }
+    }
+}
