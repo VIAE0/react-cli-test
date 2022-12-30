@@ -27,7 +27,7 @@
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
-    "git-cz": "^3.0.1"
+    "git-cz": "^3.3.0"
   }
 }
 
